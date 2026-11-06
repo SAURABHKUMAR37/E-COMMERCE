@@ -8,6 +8,7 @@ import userRouter from './routes/userRouter.js';
 import productRouter from './routes/productRoute.js';
 import caartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
+import chatbotRouter from './routes/chatbotRoute.js';
 
 //app config
  const app=express();
@@ -23,6 +24,7 @@ app.use('/api/user',userRouter)
 app.use('/api/product',productRouter)
 app.use('/api/cart',caartRouter);
 app.use('/api/order',orderRouter)
+app.use('/api/chat', chatbotRouter);
 
 app.get("/",(req,res)=>{
     res.send("API WORKING")
